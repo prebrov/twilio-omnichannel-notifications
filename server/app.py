@@ -55,6 +55,7 @@ def outbound_studio_flow(to_sms,
         'To': to_voice,
         'From': TWILIO_NUMBER,
         'Parameters': json.dumps({
+            # These parameters will be available in Twilio Studio as {{flow.data.variable_name}}
             'sms': to_sms,
             'voice': to_voice,
             'email': to_email,
